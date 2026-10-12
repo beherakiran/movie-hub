@@ -8,7 +8,7 @@ export async function getPopularMovies() {
   );
 
   if (!response.ok) {
-    throw new Error("Failed to fetch popular movies");
+    console.log("Failed to fetch popular movies");
   }
 
   const data = await response.json();
@@ -22,7 +22,7 @@ export async function getMovieDetails(movieId) {
     );
 
     if (!response.ok) {
-        throw new Error("Failed to fetch movie details");
+        console.log("Failed to fetch movie details");
     }
 
     const data = await response.json();
@@ -36,7 +36,7 @@ export async function searchMovies(query) {
     );
 
     if (!response.ok) {
-        throw new Error("Failed to search movies");
+        console.log("Failed to search movies");
     }
 
     const data = await response.json();
