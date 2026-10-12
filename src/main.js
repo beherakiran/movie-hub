@@ -47,6 +47,10 @@ searchInput.addEventListener("input", () => {
 
   searchMovies(query)
     .then((movies) => {
+       if (movies.length === 0) {
+        alert("No movies found");
+    }
+
       showMovies(movies, (movie) => {
         getMovieDetails(movie.id).then((details) => {
           showMovieModal(details);
